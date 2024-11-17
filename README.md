@@ -1,2 +1,2 @@
 # cypress_test
-This is for cypress training with Idongesit to commit cypress scripts
+This is for my cypress training with Idongesit to commit cypress scripts
