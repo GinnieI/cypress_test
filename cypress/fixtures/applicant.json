@@ -1,0 +1,7 @@
+{
+  "username": "ginnieikyuior+12@gmail.com",
+  "password": "Password@1",
+  "usernameField": "[data-test='username']",
+  "passwordField": "[data-test='password']",
+  "loginButton": "[data-test='login']"
+}
