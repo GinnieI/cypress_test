@@ -18,6 +18,9 @@ import './commands'
 import './login.actions'
 import './forma.fields'
 import 'cypress-mochawesome-reporter/register';
+import registerCypressGrep from '@cypress/grep/src/support'
+registerCypressGrep()
+
 // import '@shelex/cypress-allure-plugin';
 // import './mailslurp';
 // Alternatively you can use CommonJS syntax:
@@ -29,3 +32,7 @@ import 'cypress-mochawesome-reporter/register';
 //         return false;
 //     })
 // })
+Cypress.on('test:before:run', (test) => {
+    console.log('Current grep pattern:', Cypress.env('grep'))
+    console.log('Running test:', test.title)
+})

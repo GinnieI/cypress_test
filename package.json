@@ -11,16 +11,18 @@
     "test": "npm run mochawesome:clear && npm run cy:run && npm run report:open",
     "mochawesome:clear": "if exist cypress\\reports (rd /s /q cypress\\reports)",
     "report:open": "start cypress/reports/html/index.html",
+    "cy:smoke2": "cypress run --env grep=@smoke",
     "test:single": "npm run mochawesome:clear && npm run cypress:run:spec && npm run report:open"
   },
   "keywords": [],
-  "author": "",
+  "author": "", 
   "license": "ISC",
   "description": "",
   "dependencies": {
     "cypress": "^13.14.2"
   },
   "devDependencies": {
+    "@cypress/grep": "^4.1.0",
     "@shelex/cypress-allure-plugin": "^2.40.2",
     "allure-commandline": "^2.32.0",
     "cypress-file-upload": "^5.0.8",

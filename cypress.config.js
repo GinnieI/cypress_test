@@ -22,11 +22,17 @@ module.exports = defineConfig({
       embeddedScreenshots: true,
       inlineAssets: true,
     },
-
     setupNodeEvents(on, config) {
       // implement node event listeners here
       require('cypress-mochawesome-reporter/plugin')(on);
       console.log("HTTP Reporter plugin is loaded");
+      require('@cypress/grep/src/plugin')(config);
+      return config;
     },
+  env: {
+    grepFilterSpecs: true, 
+    grepOmitFiltered: true,
+    grepIntegrationFolder: 'cypress/e2e/test_cases'
   },
+ },
 });
